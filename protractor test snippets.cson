@@ -1,0 +1,350 @@
+'.source.js, .source.ts':
+
+# Jasmine
+
+  'Describe Block':
+    prefix: 'descblk'
+    body: """
+      describe('${1:blah}', () => {
+        $2
+      });
+      """
+  'It Block':
+    prefix: 'itblk'
+    body: """
+      it('should ${1:blah}', () => {
+        $2
+      });
+      """
+  'Before Each Block':
+    prefix: 'beblk'
+    body: """
+      beforeEach( () => {
+        $1
+      });
+      """
+  'After Each Block':
+    prefix: 'aeblk'
+    body: """
+      afterEach( () => {
+        $1
+      });
+      """
+  'This Block':
+    prefix: 'thblk'
+    body: """
+      this.${1:thing} = () => {
+        $2
+      };
+      """
+# Matchers
+
+  'Expect':
+    prefix: 'expect'
+    body: "expect($1)"
+  '.toBe':
+    prefix: '.tb'
+    body: ".to­Be(${1:null | true | false})"
+  '.toEqual':
+    prefix: '.te'
+    body: ".toEqual(${1:value})"
+  '.toMat­ch':
+    prefix: '.tm'
+    body: ".toMat­ch(${1:regex | string})"
+  '.toBe­Def­ine­d':
+    prefix: '.tbdef­'
+    body: ".toBe­Def­ine­d()"
+  '.toBe­Und­efi­ned':
+    prefix: '.tbund­ef'
+    body: ".toBe­Und­efi­ned()"
+  '.toBe­Nul­l':
+    prefix: '.tbnul­l'
+    body: ".toBe­Nul­l()"
+  '.toBe­Tru­thy':
+    prefix: '.tbtru­thy'
+    body: ".toBe­Tru­thy()"
+  '.toBe­Fal­sy':
+    prefix: '.tbfal­sy'
+    body: ".toBe­Fal­sy()"
+  '.to­Con­tain':
+    prefix: '.tc'
+    body: ".to­Con­tain(${1:string})"
+  '.toBe­Les­sTh­an':
+    prefix: '.tbles­sth­an'
+    body: ".toBe­Les­sTh­an(${1:number})"
+  '.toBe­Gre­ate­rTh­an':
+    prefix: '.tbgre­ate­rth­an'
+    body: ".toBe­Gre­ate­rTh­an(${1:number})"
+  '.toBe­NaN':
+    prefix: '.tbnan'
+    body: ".toBe­NaN($1{number})"
+  '.toBe­Clo­seTo':
+    prefix: '.tbclo­seto'
+    body: ".toBe­Clo­seTo(${1:number},${2:precision})"
+  '.toTh­row':
+    prefix: '.tth­row'
+    body: ".toTh­row()"
+  '.toTh­rowError':
+    prefix: '.tth­rowe'
+    body: ".toTh­rowError(${1:expected},${2:message})"
+  '.not':
+    prefix: '.not'
+    body: ".not"
+  '.nothing':
+    prefix: '.nthg'
+    body: ".nothing()"
+  '.toBeGreaterThanOrEqual':
+    prefix: '.tbgtoe'
+    body: ".toBeGreaterThanOrEqual(${1:Expected})"
+  '.toBeLessThanOrEqual':
+    prefix: '.tbltoe'
+    body: ".toBeLessrThanOrEqual(${1:Expected})"
+  '.toBeNegativeInfinity':
+    prefix: '.tbni'
+    body: ".toBeNegativeInfinity()"
+  '.toBePositiveInfinity':
+    prefix: '.tbpi'
+    body: ".toBePositiveInfinity()"
+  '.toHaveBeenCalled':
+    prefix: '.thbc'
+    body: ".toHaveBeenCalled()"
+  '.toHaveBeenCalledBefore':
+    prefix: '.thbcb'
+    body: ".toHaveBeenCalledBefore(${1:otherSpy})"
+  '.toHaveBeenCalledTimes':
+    prefix: '.thbct'
+    body: ".toHaveBeenCalledTimes(${1:Number})"
+  '.toHaveBeenCalledWith':
+    prefix: '.thbcw'
+    body: ".toHaveBeenCalledWith(${1:Arguments})"
+  '.toHaveClass':
+    prefix: '.thcla'
+    body: ".toHaveClass(${1:expected})"
+  '.toThrowMatching':
+    prefix: '.tthm'
+    body: ".toHaveClass(${1:predicate})"
+
+
+
+
+
+
+
+# WebElement
+
+  '.clear':
+    prefix: 'clear'
+    body: ".clear()"
+  '.click':
+    prefix: 'click'
+    body: ".click()"
+  '.getAttribute':
+    prefix: 'gatt'
+    body: ".getAttribute(${1:value})"
+  '.getCssValue':
+    prefix: 'gcvalue'
+    body: ".getCssValue(${1:stylePropertyName})"
+  '.getDriver':
+    prefix: 'gdriver'
+    body: ".getDriver()"
+  '.getInnerHtml':
+    prefix: 'gih'
+    body: ".getInnerHtml()"
+  '.getLocation':
+    prefix: 'glocation'
+    body: ".getLocation()"
+  '.getOuterHtml':
+    prefix: 'goh'
+    body: ".getOuterHtml()"
+  '.getSize':
+    prefix: 'gsize'
+    body: ".getSize()"
+  '.getTagName':
+    prefix: 'gtagname'
+    body: ".getTagName()"
+  '.getText':
+    prefix: 'gtext'
+    body: ".getText()"
+  '.isDisplayed':
+    prefix: 'isdisplayed'
+    body: ".isDisplayed()"
+  '.isElementPresent':
+    prefix: 'iselementpresent'
+    body: ".isElementPresent()"
+  '.isEnabled':
+    prefix: 'isenabled'
+    body: ".isEnabled()"
+  '.isSelected':
+    prefix: 'isselected'
+    body: ".isSelected()"
+  '.sendKeys':
+    prefix: 'skeys'
+    body: ".sendKeys($1)"
+  '.submit':
+    prefix: 'submit'
+    body: ".submit()"
+  '.toWireValue':
+    prefix: 'twvalue'
+    body: ".toWireValue()"
+  '.then':
+    prefix: '.then'
+    body: """
+      .then( () => {
+        $1
+      });
+      """
+  '.each':
+    prefix: '.each'
+    body: """
+      .each( () => {
+        $1
+      });
+      """
+  ':nth-child':
+    prefix: 'nthch'
+    body: ":nth-child(${1:Index})"
+
+# Locators
+
+  'element by.id':
+    prefix: 'elbi'
+    body: 'element(by.id($1));'
+  'element by.name':
+    prefix: 'elbn'
+    body: 'element(by.name($1));'
+  'element by.className':
+    prefix: 'elbcn'
+    body: 'element(by.className($1));'
+  'element by.repeater':
+    prefix: 'elbr'
+    body: 'element(by.repeater($1));'
+  'element by.deepCss':
+    prefix: 'elbdc'
+    body: 'element(by.deepCss($1));'
+  'element by.css':
+    prefix: 'elbc'
+    body: 'element(by.css($1));'
+  'element by.linkText':
+    prefix: 'elblt'
+    body: 'element(by.linkText($1));'
+  'element by.partialLinkText':
+    prefix: 'elbplt'
+    body: 'element(by.partialLinkText($1));'
+  'element by.buttonText':
+    prefix: 'elbbt'
+    body: 'element(by.buttonText($1));'
+  'element by.model':
+    prefix: 'elbm'
+    body: 'element(by.model($1));'
+  'element by.binding':
+    prefix: 'elbb'
+    body: 'element(by.binding($1));'
+  'element by.xpath':
+    prefix: 'elbx'
+    body: 'element(by.xpath($1));'
+  'element.all by.id':
+    prefix: 'elabi'
+    body: 'element.all(by.id($1));'
+  'element.all by.name':
+    prefix: 'elabn'
+    body: 'element.all(by.name($1));'
+  'element.all by.className':
+    prefix: 'elabcn'
+    body: 'element.all(by.className($1));'
+  'element.all by.deepCss':
+    prefix: 'elabdc'
+    body: 'element.all(by.deepCss($1));'
+  'element.all by.css':
+    prefix: 'elabc'
+    body: 'element.all(by.css($1));'
+  'element.all by.linkText':
+    prefix: 'elablt'
+    body: 'element.all(by.linkText($1));'
+  'element.all by.buttonText':
+    prefix: 'elabbt'
+    body: 'element.all(by.buttonText($1));'
+  'element.all by.model':
+    prefix: 'elabm'
+    body: 'element.all(by.model($1));'
+  'element.all by.binding':
+    prefix: 'elabb'
+    body: 'element.all(by.binding($1));'
+  'element.all by.repeater':
+    prefix: 'elabr'
+    body: 'element(by.repeater($1));'
+  'element.all by.xpath':
+    prefix: 'elabx'
+    body: 'element.all(by.xpath($1));'
+
+
+# Browser
+
+  'browser.get':
+    prefix: 'brg'
+    body: 'browser.get($1);'
+  'browser.pause':
+    prefix: 'brp'
+    body: 'browser.pause($1);'
+  'browser.setLocation':
+    prefix: 'brsl'
+    body: 'browser.setLocation($1);'
+  'browser.getCurrentUrl':
+    prefix: 'brgc'
+    body: 'browser.getCurrentUrl($1);'
+  'browser.addMockModule':
+    prefix: 'bram'
+    body: 'browser.addMockModule($1);'
+  'browser.clearMockModules':
+    prefix: 'brcm'
+    body: 'browser.clearMockModules($1);'
+  'browser.wait':
+    prefix: 'brw'
+    body: 'browser.wait($1);'
+  'browser.waitForAngular':
+    prefix: 'brwa'
+    body: 'browser.waitForAngular();'
+  'browser.waitForAngularEnabled':
+    prefix: 'brwae'
+    body: 'browser.waitForAngularEnabled($1);'
+  'browser.sleep':
+    prefix: 'brslp'
+    body: 'browser.sleep($1);'
+  'browser.switchTo':
+    prefix: 'brswt'
+    body: 'browser.switchTo($1);'
+  'browser.getTitle':
+    prefix: 'brgt'
+    body: 'browser.getTitle($1);'
+  'browser.getAllWindowHandles':
+    prefix: 'brgawh'
+    body: 'browser.getAllWindowHandles($1);'
+  'browser.driver.manage().window().maximize();':
+    prefix: 'bdmwm'
+    body: 'browser.driver.manage().window().maximize();'
+
+  # actions
+
+  'browser.actions':
+    prefix: 'bract'
+    body: 'browser.actions($1);'
+  '.mouseMove':
+    prefix: '.mm'
+    body: '.mouseMove($1);'
+  '.perform':
+    prefix: '.perf'
+    body: '.perform();'
+  'protractor.Key':
+    prefix: 'pk'
+    body: 'protractor.Key.$1'
+  '.clickAndHold':
+    prefix: '.cah'
+    body: '.clickAndHold();'
+  '.contextClick':
+    prefix: '.cc'
+    body: '.mouseMove();'
+  '.doubleClick':
+    prefix: '.dc'
+    body: '.doubleClick();'
+  '.dragAndDrop':
+    prefix: '.dad'
+    body: '.dragAndDrop(${1:source},${2:target});'
